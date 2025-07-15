@@ -11,6 +11,8 @@ use crate::errors::TockloaderError;
 
 use super::decode::{bytes_to_string, decode_attribute};
 
+use log::{debug, error, info, trace, warn};
+
 #[derive(Debug)]
 pub struct SystemAttributes {
     pub board: Option<String>,
