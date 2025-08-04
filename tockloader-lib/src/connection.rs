@@ -1,6 +1,7 @@
 use std::time::Duration;
 
 use async_trait::async_trait;
+use log::info;
 use probe_rs::probe::DebugProbeInfo;
 use probe_rs::{Permissions, Session};
 use tokio::io::AsyncWriteExt;

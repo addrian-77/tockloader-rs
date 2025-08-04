@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0 OR MIT
 // Copyright OXIDOS AUTOMOTIVE 2024.
 
-use probe_rs::{debug, Core, MemoryInterface};
+use probe_rs::{Core, MemoryInterface};
 
 use tbf_parser::parse::{parse_tbf_footer, parse_tbf_header, parse_tbf_header_lengths};
 use tbf_parser::types::{TbfFooterV2Credentials, TbfHeader};
@@ -12,7 +12,7 @@ use tokio_serial::SerialStream;
 use crate::bootloader_serial::{issue_command, Command, Response};
 use crate::errors::TockloaderError;
 
-use log::{debug, error, info, trace, warn};
+use log::info;
 
 #[derive(Debug)]
 pub struct AppAttributes {

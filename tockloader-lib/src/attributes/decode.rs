@@ -1,7 +1,7 @@
 // Licensed under the Apache License, Version 2.0 or the MIT License.
 // SPDX-License-Identifier: Apache-2.0 OR MIT
 // Copyright OXIDOS AUTOMOTIVE 2024.
-use log::{debug, error, info, trace, warn};
+use log::info;
 #[derive(Debug)]
 pub struct DecodedAttribute {
     pub key: String,
