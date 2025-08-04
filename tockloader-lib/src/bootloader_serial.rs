@@ -11,7 +11,7 @@ use std::time::Duration;
 use tokio::io::{AsyncReadExt, AsyncWriteExt};
 use tokio_serial::{SerialPort, SerialStream};
 
-use log::{debug, error, info, trace, warn};
+use log::{error, info};
 
 // Tell the bootloader to reset its buffer to handle a new command
 pub const SYNC_MESSAGE: [u8; 3] = [0x00, 0xFC, 0x05];
