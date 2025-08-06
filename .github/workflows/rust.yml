@@ -8,10 +8,10 @@ on:
   workflow_dispatch:
     inputs:
       defaultFeature:
-        type: boolean
+        type: string
         description: 'Default feature'     
         required: true
-        default: true
+        default: 'true'
       tags:
         description: 'libudev-dev dependency'  
   push:
@@ -36,7 +36,7 @@ jobs:
         fi
     - name: Install libudev
       run: |
-        if [ $DEFAULT_FEATURE == true ]; then
+        if [ "$DEFAULT_FEATURE" = "true" ]; then
           sudo apt-get install -y  libudev-dev
         else
           echo Skipped libudev install
@@ -83,7 +83,7 @@ jobs:
         components: clippy
     - name: Install libudev
       run: |
-        if [ $DEFAULT_FEATURE == true ]; then
+        if [ "$DEFAULT_FEATURE" = "true" ]; then
           sudo apt-get install -y  libudev-dev
         else
           echo Skipped libudev install
